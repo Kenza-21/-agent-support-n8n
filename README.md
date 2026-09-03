@@ -16,14 +16,14 @@ prendre, dans le respect de règles strictes définies dans son prompt système.
 
 ```mermaid
 flowchart LR
-    A[Webhook POST] --> B[AI Agent · Gemini]
-    B --> C{Sortie contient<br/>[ESCALADE] ?}
-    C -- oui --> D[Respond to Webhook<br/>message d'attente · JSON]
-    C -- non --> E[Respond to Webhook1<br/>réponse de l'agent · texte]
-    M[Simple Memory<br/>clé = email client] -.mémoire.-> B
-    B -.outil.-> T1[consulter_commande<br/>Google Sheets]
-    B -.outil.-> T2[chercher_faq<br/>Google Sheets]
-    B -.outil.-> T3[escalade_humaine<br/>Gmail]
+    A["Webhook POST"] --> B["AI Agent · Gemini"]
+    B --> C{"Sortie contient<br/>[ESCALADE] ?"}
+    C -- oui --> D["Respond to Webhook<br/>message d'attente · JSON"]
+    C -- non --> E["Respond to Webhook1<br/>réponse de l'agent · texte"]
+    M["Simple Memory<br/>clé = email client"] -.mémoire.-> B
+    B -.outil.-> T1["consulter_commande<br/>Google Sheets"]
+    B -.outil.-> T2["chercher_faq<br/>Google Sheets"]
+    B -.outil.-> T3["escalade_humaine<br/>Gmail"]
 ```
 
 1. Un `POST` sur le **webhook** transmet le message du client et son email.
