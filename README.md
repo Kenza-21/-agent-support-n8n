@@ -8,8 +8,6 @@ Construit sur **n8n** avec un LLM **Google Gemini**, une **mémoire conversation
 et **trois outils métier**. L'agent analyse chaque demande entrante et décide seul de l'action à
 prendre, dans le respect de règles strictes définies dans son prompt système.
 
-![Canvas du workflow](docs/canvas.png)
-
 ---
 
 ## Fonctionnement
